@@ -28,7 +28,7 @@
   "scripts": {
     "lint": "eslint --cache \"./src/*\""
   },
-  "main": "index.js",
+  "main": "src/index.js",
   "bin": {},
   "dependencies": {
     "mkdirp": "^0.5.0",
