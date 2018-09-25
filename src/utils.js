@@ -1,30 +1,29 @@
-'use strict';
+const path = require('path');
 
-var path = require('path'),
-    rmdir = require('rmdir'),
-    fs = require('fs');
+const rmdir = require('rmdir');
 
-var absPath = function (p) {
+const fs = require('fs');
+
+const absPath = function(p) {
   if (path.isAbsolute(p)) {
     return p;
-  } else {
-    return path.join(path.dirname(__filename), p);
+  }
+  return path.join(path.dirname(__filename), p);
+};
+
+const removeDir = function(relPath, callback) {
+  const path = absPath(relPath);
+  rmdir(path, callback);
+};
+
+const createDir = function(relPath) {
+  if (!fs.existsSync(absPath(relPath))) {
+    fs.mkdirSync(absPath(relPath));
   }
 };
 
-var removeDir = function (relPath, callback) {
-    var path = absPath(relPath);
-    rmdir(path, callback);
-};
-
-var createDir = function (relPath) {
-    if (!fs.existsSync(absPath(relPath))) {
-        fs.mkdirSync(absPath(relPath));
-    }
-};
-
 module.exports = {
-    absPath: absPath,
-    removeDir: removeDir,
-    createDir: createDir
+  absPath,
+  removeDir,
+  createDir,
 };
