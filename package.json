@@ -1,17 +1,18 @@
 {
-    "name": "dynamodb-localhost",
-    "version": "0.0.7",
-    "engines": {
-        "node": ">=4.0"
-    },
-    "description": "Dynamodb local plugin for devops",
-    "author": "99xtechnology.com",
-    "license": "MIT",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/99xt/dynamodb-localhost"
-    },
-    "keywords": [
+  "name": "@fabrictech/dynamodb-localhost",
+  "version": "0.0.7",
+  "engines": {
+    "node": "8.10.0",
+    "yarn": "^1.9.4"
+  },
+  "description": "Dynamodb local plugin for devops",
+  "author": "fabrictech",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/99xt/dynamodb-localhost"
+  },
+  "keywords": [
     "aws",
     "dynamodb",
     "dynamo",
@@ -24,12 +25,21 @@
     "dynamodb-local",
     "dynamodb-localhost"
   ],
-    "main": "index.js",
-    "bin": {},
-    "dependencies": {
-        "mkdirp": "^0.5.0",
-        "progress": "^1.1.8",
-        "rmdir": "^1.2.0",
-        "tar": "^2.0.0"
-    }
+  "scripts": {
+    "lint": "eslint --cache \"./src/*\""
+  },
+  "main": "index.js",
+  "bin": {},
+  "dependencies": {
+    "mkdirp": "^0.5.0",
+    "progress": "^1.1.8",
+    "rmdir": "^1.2.0",
+    "tar": "^2.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.6.0",
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-plugin-prettier": "^2.6.2",
+    "prettier": "^1.14.3"
+  }
 }

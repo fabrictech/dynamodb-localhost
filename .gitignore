@@ -1,2 +1,5 @@
 /node_modules
-/dynamodb/bin
+/bin
+
+.DS_Store
+.eslintcache
