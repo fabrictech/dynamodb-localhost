@@ -1,3 +1,13 @@
+# Fabric Fork
+
+The biggest change in our fork is that there's no longer a separate install process, as in practice I found it somewhat flake-y. Instead, we ship a copy of the DynamoDB Local jar in the `bin/` directory.
+
+The public API has changed to reflect this - the only remaining public methods are `start`, `stop`, and `restart`.
+
+Internally, we've integrated ESLint and a pretty vanilla airbnb config, which led to a general refactor. Most notably, we've introduced es6 where applicable.
+
+# Original
+
 dynamodb-localhost
 =================================
 [![Join the chat at https://gitter.im/99xt/dynamodb-localhost](https://badges.gitter.im/99xt/dynamodb-localhost.svg)](https://gitter.im/99xt/dynamodb-localhost?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)

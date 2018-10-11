@@ -43,20 +43,16 @@ const starter = {
       ...additionalArgs,
     ];
 
-    console.log({ args, dbDir });
-
     const child = spawn('java', args, {
       cwd: dbDir,
-      env: process.env,
       stdio: ['pipe', 'pipe', 'pipe'],
     });
 
-    // if (!child.pid) {
-    //   throw new Error('Unable to start DynamoDB Local process!');
-    // }
+    if (!child.pid) {
+      throw new Error('Unable to start DynamoDB Local process!');
+    }
 
     child.on('error', code => {
-      console.error('errored');
       throw new Error(code);
     });
 

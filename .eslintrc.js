@@ -7,5 +7,10 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 2018,
   },
-  rules: {},
+  rules: {
+    /*
+     * Disable console.log in particular but allow other console methods.
+     */
+    'no-console': ['error', { allow: ['warn', 'error', 'info'] }],
+  },
 };
