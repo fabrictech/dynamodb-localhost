@@ -31,12 +31,7 @@
   },
   "main": "src/index.js",
   "bin": {},
-  "dependencies": {
-    "mkdirp": "^0.5.0",
-    "progress": "^1.1.8",
-    "rmdir": "^1.2.0",
-    "tar": "^2.0.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "eslint": "^5.6.0",
     "eslint-config-airbnb-base": "^13.1.0",
