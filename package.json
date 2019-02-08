@@ -1,6 +1,6 @@
 {
   "name": "@fabrictech/dynamodb-localhost",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "engines": {
     "node": "8.10.0",
     "yarn": "^1.9.4"
