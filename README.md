@@ -6,6 +6,15 @@ The public API has changed to reflect this - the only remaining public methods a
 
 Internally, we've integrated ESLint and a pretty vanilla airbnb config, which led to a general refactor. Most notably, we've introduced es6 where applicable.
 
+### Publishing New Versions
+
+If you make changes to this package, they'll need to be published to `npm` in order to be available to dependents, such as `linen`.
+
+Please take the following steps:
+
+1. Bump the package version, in package.json, as appropriate. For ex, for a minor version bump, `0.3.2 -> 0.3.3`
+
+2. Run `npm publish`. Since engineers are added to our npm organization during onboarding, you should have privileges to do so. You'll see some `npm notice` output, and then finally a line similar to this, showing the new package version: `+ @fabrictech/dynamodb-localhost@0.3.3`.
 # Original
 
 dynamodb-localhost
