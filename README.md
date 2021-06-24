@@ -12,7 +12,7 @@ If you make changes to this package, they'll need to be published to `npm` in or
 
 Please take the following steps:
 
-1. Bump the package version, in package.json, as appropriate. For ex, for a minor version bump, `0.3.2 -> 0.3.3`
+1. Bump the package version using [`npm version`](https://docs.npmjs.com/cli/v7/commands/npm-version). For ex, for a patch version bump, run `npm version patch`.
 
 2. Run `npm publish`. Since engineers are added to our npm organization during onboarding, you should have privileges to do so. You'll see some `npm notice` output, and then finally a line similar to this, showing the new package version: `+ @fabrictech/dynamodb-localhost@0.3.3`.
 # Original
